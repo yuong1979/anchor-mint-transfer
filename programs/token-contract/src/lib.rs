@@ -9,6 +9,7 @@ declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 pub mod token_contract {
     use super::*;
 
+
     pub fn mint_token(ctx: Context<MintToken>,) -> Result<()> {
         // Create the MintTo struct for our context
         let cpi_accounts = MintTo {

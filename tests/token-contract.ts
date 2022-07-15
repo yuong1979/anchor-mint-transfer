@@ -20,6 +20,9 @@ describe("token-contract", () => {
   // AssociatedTokenAccount for anchor's workspace wallet
   let associatedTokenAccount = undefined;
 
+
+
+  
   it("Mint a token", async () => {
     // Get anchor's wallet's public key
     const key = anchor.AnchorProvider.env().wallet.publicKey;
@@ -77,6 +80,7 @@ describe("token-contract", () => {
     const minted = (await program.provider.connection.getParsedAccountInfo(associatedTokenAccount)).value.data.parsed.info.tokenAmount.amount;
     assert.equal(minted, 10);
   });
+
 
   it("Transfer token", async () => {
     // Get anchor's wallet's public key
