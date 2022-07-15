@@ -21,6 +21,10 @@ describe("token-contract", () => {
   let associatedTokenAccount = undefined;
 
 
+  it("Is initialized", async () => {
+    const tx = await program.methods.initialize().rpc();
+    console.log("Your transaction signature", tx);
+})
 
   
   it("Mint a token", async () => {

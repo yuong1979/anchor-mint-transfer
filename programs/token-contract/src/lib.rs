@@ -9,6 +9,10 @@ declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 pub mod token_contract {
     use super::*;
 
+    pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
+        Ok(())
+    }
+
 
     pub fn mint_token(ctx: Context<MintToken>,) -> Result<()> {
         // Create the MintTo struct for our context
@@ -74,3 +78,6 @@ pub struct TransferToken<'info> {
     // the authority of the from account 
     pub from_authority: Signer<'info>,
 }
+
+#[derive(Accounts)]
+pub struct Initialize {}
